@@ -4,6 +4,8 @@
         "text": "Dispensed repiratory medications per state during the 2019/20 bushfires",
         "fontSize": 24     
     },
+    "width": 900,
+    "height": 600,
     "data": {
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179hw10/main/data/dispensed.csv",
         "format": {"type": "csv"}
