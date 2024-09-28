@@ -24,6 +24,10 @@
             "as": "EndDate"
         },
         {
+            "calculate": "datetime('2019-12-21')",
+            "as": "PeakDate"
+        },
+        {
             "calculate": "datetime('2019-11-23')",
             "as": "annoX"
         },
@@ -75,6 +79,21 @@
             "encoding": {
                 "x": {
                     "field": "EndDate",
+                    "type": "temporal"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "stroke": "red",
+                "strokeWidth": 2,
+                "opacity": 0.7,
+                "strokeDash": [5, 7]
+            },
+            "encoding": {
+                "x": {
+                    "field": "PeakDate",
                     "type": "temporal"
                 }
             }
