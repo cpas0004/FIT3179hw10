@@ -23,7 +23,7 @@
         "axis": {"title": "Respiratory Prescriptions Dispensed"}
       },
       "color": {
-        "field": "Category",
+        "field": "State",
         "type": "nominal",
         "legend": {"title": "State"}
       }
