@@ -5,21 +5,8 @@
         "fontSize": 24     
     },
     "data": {
-        "url": "https://raw.githubusercontent.com/cpas0004/FIT3179hw10/main/data/dispensed.csv"
-    },
-    "mark": "bar",
-    "encoding": {
-        "x": { "field": "daily_cost", "type": "quantitative", "title":"Daily Cost"},
-        "y": { "field": "city", "type": "nominal", "title": null}
-    }
-}
-
-{
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A multi-line chart.",
-    "data": {
-      "url": "data.csv",  // Replace with your CSV file URL or local path
-      "format": {"type": "csv"}
+        "url": "https://raw.githubusercontent.com/cpas0004/FIT3179hw10/main/data/dispensed.csv",
+        "format": {"type": "csv"}
     },
     "mark": "line",
     "encoding": {
@@ -29,14 +16,14 @@
         "axis": {"title": "Date"}
       },
       "y": {
-        "field": "Value",
+        "field": "Dispensed",
         "type": "quantitative",
-        "axis": {"title": "Value"}
+        "axis": {"title": "Respiratory Prescriptions Dispensed"}
       },
       "color": {
         "field": "Category",
         "type": "nominal",
-        "legend": {"title": "Category"}
+        "legend": {"title": "State"}
       }
     }
-  }
+}
