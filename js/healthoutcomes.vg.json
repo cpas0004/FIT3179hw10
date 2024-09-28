@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Dispensed repiratory medications per state during the 2019/20 bushfires",
+        "fontSize": 24     
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/cpas0004/FIT3179hw10/main/data/dispensed.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": { "field": "daily_cost", "type": "quantitative", "title":"Daily Cost"},
+        "y": { "field": "city", "type": "nominal", "title": null}
+    }
+}
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A multi-line chart.",
+    "data": {
+      "url": "data.csv",  // Replace with your CSV file URL or local path
+      "format": {"type": "csv"}
+    },
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "axis": {"title": "Date"}
+      },
+      "y": {
+        "field": "Value",
+        "type": "quantitative",
+        "axis": {"title": "Value"}
+      },
+      "color": {
+        "field": "Category",
+        "type": "nominal",
+        "legend": {"title": "Category"}
+      }
+    }
+  }
