@@ -28,12 +28,20 @@
             "as": "PeakDate"
         },
         {
-            "calculate": "datetime('2019-11-23')",
-            "as": "annoX"
+            "calculate": "datetime('2019-11-11')",
+            "as": "anno1X"
         },
         {
-            "calculate": "40000",
-            "as": "annoY"
+            "calculate": "117000",
+            "as": "anno1Y"
+        },
+        {
+            "calculate": "datetime('2019-12-23')",
+            "as": "anno2X"
+        },
+        {
+            "calculate": "35000",
+            "as": "anno2Y"
         }
     ],
     "layer": [
@@ -99,6 +107,13 @@
             }
         },
         {
+            "selection": { 
+                "state_highlight"  : { 
+                  "type": "multi",
+                  "fields": ["State"], 
+                  "bind": "legend"
+              } 
+            }, 
             "mark": {
                 "type": "line",
                 "point": true,
@@ -120,6 +135,10 @@
                     "type": "nominal",
                     "legend": {"title": "State"},
                     "sort": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"]
+                },
+                "opacity"  : { 
+                    "condition": {"selection": "state_highlight", "value": 0.9}, 
+                    "value": 0.2 
                 },
                 "tooltip": [
                     {"field": "WeekEnding", "type": "nominal", "title": "Date"},
@@ -144,15 +163,38 @@
             },
             "encoding": {
                 "x": {
-                    "field": "annoX", 
+                    "field": "anno1X", 
                     "type": "temporal" 
                 },
                 "y": {
-                    "field": "annoY", 
+                    "field": "anno1Y", 
                     "type": "quantitative"
                 },
                 "text": {
                     "value": "2019/20 Bushfire Season"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "fontSize": 16,
+                "fontWeight": 100,
+                "color": "red",
+                "align": "left",
+                "baseline": "middle"
+            },
+            "encoding": {
+                "x": {
+                    "field": "anno2X", 
+                    "type": "temporal" 
+                },
+                "y": {
+                    "field": "anno2Y", 
+                    "type": "quantitative"
+                },
+                "text": {
+                    "value": "Prescriptions peaked during the bushfires"
                 }
             }
         }
