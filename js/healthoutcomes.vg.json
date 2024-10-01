@@ -123,12 +123,18 @@
                 "x": {
                     "field": "Date",
                     "type": "temporal",
-                    "axis": {"title": "Date"}
+                    "axis": {
+                        "title": "Date",
+                        "titleFontSize": 15
+                    }
                 },
                 "y": {
                     "field": "Dispensed",
                     "type": "quantitative",
-                    "axis": {"title": "Dispensed Respiratory Prescriptions"}
+                    "axis": {
+                        "title": "Dispensed Respiratory Prescriptions",
+                        "titleFontSize": 15
+                    }
                 },
                 "color": {
                     "field": "State",
